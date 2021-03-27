@@ -81,6 +81,8 @@
 
 8. `make -j1 V=s` （-j1 后面是线程数。第一次编译推荐用单线程，国内请尽量全局科学上网）即可开始编译你要的固件了。
 
+9. 如果出现 bash: po2lmo: command not found 错误，应该是编译顺序的问题，先make package/feeds/luci/luci-base/compile V=99，再编译就好了。
+
 编译成功后，再次编译可以启动多线程编译。如4核心8线程i7上开启16线程使用`make -j16 V=sc`
 
 ## 固件下载
